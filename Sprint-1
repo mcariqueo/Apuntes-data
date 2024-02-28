@@ -1,1 +1,33 @@
-esto es para subir la informacion del sprint 1
+SPRINT 1
+Objetivos: 
+	# Construir una base de dades relacional senzilla amb MySQL.
+	# Realitzar consultes senzilles.
+	# Realitzar operacions la base de dades MySQL.
+
+Importar las bases de datos
+	# Importar a MySQL la base de datos transaction. 
+  # Esta Bd consta de dos tablas: company y transaction
+  # En el curso entregan dos documentos: la estructura de la tabla y el contenido de los datos
+
+Exercici 1: 
+	# Mostra les característiques principals de l'esquema creat.
+	# explica les diferents taules i variables que existeixen. 
+	# Assegura't d'incloure un diagrama que il·lustri la relació entre les diferents taules i variables.
+
+VISUALIZAR LAS TABLAS
+	SHOW tables FROM transactions;			# Mostrar todas las tablas
+# Describe las caracteristicas de la tabla
+	# Este punto es similar al comando de la creacion de la tabla
+	DESC company; 	 
+		# La tabla company consiste en una tabla compuesta por 6 campos, 
+        # el type nos indica el tipo de variable, el valor entre parentesis indica el numero de bites permitidos
+        # varchar significa "cadena de caracteres"
+        # La primary key, es decir, .............., corresponde a ID.alter
+        # En todos los campos se ven valores nulos, probablemente es la ultima fila
+    desc transaction;
+		# La tabla esta compuesta por 9 campos, 
+        # el type nos indica el tipo de variable, el valor entre parentesis indica el numero de bites permitidos
+        # La primary key, es decir, .............., corresponde a ID. este no es el mismo id de company
+        # Se indica con la palabra "MUL" la foreing key 
+        # En todos los campos se ven valores nulos, probablemente es la ultima fila
+
