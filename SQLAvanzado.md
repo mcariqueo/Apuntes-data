@@ -4,15 +4,13 @@ Subconsultas, tambien onocidas como, _subqueries_, son una herramienta avanzas e
 
 La integracion de subconsultas se relizan en comandos tales como **WHERE**, **HAVING**, **SELECT** y **FROM**
 
-
-
 <details>
 	<summary>Tabla completa</summary>
 
-| Tipo de Subconsulta             | Descripción                                        | Ejemplo                                               |
-|---------------------------------|----------------------------------------------------|-------------------------------------------------------|
+| Tipo de Subconsulta             | Descripción                                       | Ejemplo                                               |
+|---------------------------------|---------------------------------------------------|-------------------------------------------------------|
 | Scalar                          | Devuelven un solo valor (escalar).                | `(SELECT COUNT(*) FROM table)`                       |
-| Comparisons                     | Usadas en comparaciones.                           | `WHERE column = (SELECT column FROM table)`          |
+| Comparisons                     | Usadas en comparaciones.                          | `WHERE column = (SELECT column FROM table)`          |
 | Row                             | Devuelven un conjunto de filas.                   | `SELECT * FROM table WHERE (column1, column2) = (SELECT col1, col2 FROM other_table)` |
 | Exists and not exists subqueries| Utilizadas con `EXISTS` o `NOT EXISTS`.           | `SELECT * FROM table WHERE EXISTS (SELECT * FROM other_table WHERE condition)` |
 | Any in some subqueries          | Usadas con `ANY`, `IN`, o `SOME`.                 | `SELECT * FROM table WHERE column > ANY (SELECT column FROM other_table)` |
