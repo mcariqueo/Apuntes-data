@@ -4,7 +4,7 @@ Subconsultas, tambien onocidas como, _subqueries_, son una herramienta avanzas e
 
 La integracion de subconsultas se relizan en comandos tales como **WHERE**, **HAVING**, **SELECT** y **FROM**
 
-
+--
 | Tipo de Subconsulta             | Descripción                                        |
 |---------------------------------|----------------------------------------------------|
 | Scalar Subqueries               | Subconsultas que devuelven un solo valor (escalar). Por ejemplo, `(SELECT COUNT(*) FROM table)`.                                                                                   |
