@@ -16,4 +16,6 @@ La integracion de subconsultas se relizan en comandos tales como **WHERE**, **HA
 
 ## Scalar subqueries
 
-  SELECT (SELECT s2 FROM t1);
+    SELECT (SELECT s2 FROM t1);
+
+Mediante este comando es posible obtener n valor unico de 
