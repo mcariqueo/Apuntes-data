@@ -4,18 +4,30 @@ Subconsultas, tambien onocidas como, _subqueries_, son una herramienta avanzas e
 
 La integracion de subconsultas se relizan en comandos tales como **WHERE**, **HAVING**, **SELECT** y **FROM**
 
---
-| Tipo de Subconsulta             | Descripción                                        |
-|---------------------------------|----------------------------------------------------|
-| Scalar Subqueries               | Subconsultas que devuelven un solo valor (escalar). Por ejemplo, `(SELECT COUNT(*) FROM table)`.                                                                                   |
-| Comparisons using subqueries    | Subconsultas utilizadas en comparaciones, como `WHERE column = (SELECT column FROM table)`.                               |
-| Row subqueries                  | Subconsultas que devuelven un conjunto de filas, se utilizan en contextos donde se espera una fila. Ejemplo: `SELECT * FROM table WHERE (column1, column2) = (SELECT col1, col2 FROM other_table)`.                |
-| Exists and not exists subqueries| Subconsultas utilizadas con `EXISTS` o `NOT EXISTS` para verificar la existencia de filas en una subconsulta. Por ejemplo, `SELECT * FROM table WHERE EXISTS (SELECT * FROM other_table WHERE condition)`.  |
-| Any in some subqueries          | Subconsultas utilizadas con `ANY`, `IN`, o `SOME` para comparar valores con un conjunto de valores devuelto por una subconsulta. Ejemplo: `SELECT * FROM table WHERE column > ANY (SELECT column FROM other_table)`. |
-| All subqueries                  | Subconsultas utilizadas con `ALL` para comparar un valor con todos los valores devueltos por una subconsulta. Ejemplo: `SELECT * FROM table WHERE column > ALL (SELECT column FROM other_table)`.        |
+
+
+<details>
+	<summary>Tabla completa</summary>
+
+| Tipo de Subconsulta             | Descripción                                        | Ejemplo                                               |
+|---------------------------------|----------------------------------------------------|-------------------------------------------------------|
+| Scalar                          | Devuelven un solo valor (escalar).                | `(SELECT COUNT(*) FROM table)`                       |
+| Comparisons                     | Usadas en comparaciones.                           | `WHERE column = (SELECT column FROM table)`          |
+| Row                             | Devuelven un conjunto de filas.                   | `SELECT * FROM table WHERE (column1, column2) = (SELECT col1, col2 FROM other_table)` |
+| Exists and not exists subqueries| Utilizadas con `EXISTS` o `NOT EXISTS`.           | `SELECT * FROM table WHERE EXISTS (SELECT * FROM other_table WHERE condition)` |
+| Any in some subqueries          | Usadas con `ANY`, `IN`, o `SOME`.                 | `SELECT * FROM table WHERE column > ANY (SELECT column FROM other_table)` |
+| All subqueries                  | Usadas con `ALL` para comparar valores.           | `SELECT * FROM table WHERE column > ALL (SELECT column FROM other_table)` |
+
+</details>
 
 ## Scalar subqueries
 
     SELECT (SELECT s2 FROM t1);
 
-Mediante este comando es posible obtener n valor unico de 
+Mediante este comando es posible obtener unn valor unico. Esto se llama, valor escalar.
+
+
+
+
+
+
